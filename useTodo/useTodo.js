@@ -1,5 +1,5 @@
 import { useEffect, useReducer } from 'react';
-import { todoReducer } from '../08-useReducer/todoReducer';
+import { todoReducer } from './todoReducer';
 
 const initialState = [];
 
@@ -34,9 +34,8 @@ export const useTodo = () => {
     dispatch({
       type: 'toggle Todo',
       payload: id,
-
-    })
-  }
+    });
+  };
 
   return {
     todos,
